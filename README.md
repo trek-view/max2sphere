@@ -83,19 +83,13 @@ Options:
 ##### Use a GoPro Max 3K video (width = 2272)
 
 ```
-$ @SYSTEM_PATH/max2spherebatch -w 2272 -n 1 testframes/3k/track%d/GS018423_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 2272 -n 1 -o testframes/3k/GS018423_%d.jpg testframes/3k/track%d/GS018423_%d.jpg
 ```
 
 ##### Use a GoPro Max 5.6K video (width = 4096)
 
 ```
-$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 testframes/5-6k/track%d/GS018421_%d.jpg
-```
-
-##### Use a custom output filename (name = davids-sphere)
-
-```
-$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 -o testframes/5-6k/output/davids-demo-sphere-%d.jpg testframes/5-6k/track%d/GS018421_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 -o testframes/5-6k/GS018421_%d.jpg testframes/5-6k/track%d/GS018421_%d.jpg
 ```
 
 ### Metadata
