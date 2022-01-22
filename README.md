@@ -38,7 +38,7 @@ The MAX2sphere command line utility should build out of the box on Linux using t
 ```
 $ git clone https://github.com/trek-view/MAX2sphere
 $ make -f Makefile
-$ @SYSTEM_PATH/MAX2sphere-batch
+$ @SYSTEM_PATH/max2spherebatch
 ```
 
 ## Usage
@@ -83,19 +83,19 @@ Options:
 ##### Use a GoPro Max 3K video (width = 2272)
 
 ```
-$ @SYSTEM_PATH/MAX2sphere-batch -w 2272 -n 1 testframes/3k/track%d/GS018423_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 2272 -n 1 testframes/3k/track%d/GS018423_%d.jpg
 ```
 
 ##### Use a GoPro Max 5.6K video (width = 4096)
 
 ```
-$ @SYSTEM_PATH/MAX2sphere-batch -w 4096 -n 1 testframes/5-6k/track%d/GS018421_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 testframes/5-6k/track%d/GS018421_%d.jpg
 ```
 
 ##### Use a custom output filename (name = davids-sphere)
 
 ```
-$ @SYSTEM_PATH/MAX2sphere-batch -w 4096 -n 1 -o testframes/5-6k/output/davids-demo-sphere-%d.jpg testframes/5-6k/track%d/GS018421_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 -o testframes/5-6k/output/davids-demo-sphere-%d.jpg testframes/5-6k/track%d/GS018421_%d.jpg
 ```
 
 ### Metadata

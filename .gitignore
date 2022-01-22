@@ -3,3 +3,4 @@
 bitmaplib.o
 MAX2spherebatch
 MAX2spherebatch.o
+*.data
