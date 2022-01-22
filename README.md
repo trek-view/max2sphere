@@ -55,19 +55,6 @@ $ ffmpeg -i INPUT.360 -map 0:0 -r 1 -q:v 1 track0/img%d.jpg -map 0:5 -r 1 -q:v 1
 
 ### Script
 
-```
-$ MAX2sphere [options] track0filename track5filename
-```
-
-Options:
-
-* `-w` n sets the output image width, default: -1
-* `-a` n sets antialiasing level, default = 2
-* `-o` s specify the output filename, default is based on track0 name. If specified then it should contain one `%d` field for the frame number
-* `-n` n Start index for the sequence, default: 0
-* `-m` n End index for the sequence, default: 100000
-* `-d` enable debug mode, default: off
-
 The sequence filename template should contain two `%d` entries. The first will be populated with the track number 0 or 5, the second is the frame sequence number, see `-n` and `-m` below.
 
 So for example, if there are 1000 frames called track0_frame0001.jpg, track5_0001.jpg, ... then the program might be called as follows:
@@ -81,6 +68,15 @@ Or if directories are used with frames track0/frame1.jpg, track5/1000.jpg, ...
 ```
 $ @SYSTEM_PATH/MAX2spherebatch -w 4096 -n 1 -m 1000 track%d/frame%4d.jpg
 ```
+
+Options:
+
+* `-w` n sets the output image width, default: -1
+* `-a` n sets antialiasing level, default = 2
+* `-o` s specify the output filename, default is based on track0 name. If specified then it should contain one `%d` field for the frame number
+* `-n` n Start index for the sequence, default: 0
+* `-m` n End index for the sequence, default: 100000
+* `-d` enable debug mode, default: off
 
 #### Examples (MacOS)
 
