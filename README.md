@@ -26,10 +26,11 @@ e.g. Template 0, width 5376, height 2688 and antialising of 2.
 
 In the case above where the output image width was autodetermined the lookup table is called `0_5376_2688_2.data`
 
+The template file
+
 The lookup table does take almost no time to read, compared to calculating the lookup table. However it does end up taking a decent about of disk space, almost 700MB in this case.
 
 For us, this is acceptable as we onl ever have 2 static lookup tables using default settings for 5.6k and 3k videos.
-
 
 ## Installation
 
@@ -83,13 +84,13 @@ Options:
 ##### Use a GoPro Max 3K video (width = 2272)
 
 ```
-$ @SYSTEM_PATH/max2spherebatch -w 2272 -n 1 -o testframes/3k/GS018423_%d.jpg testframes/3k/track%d/GS018423_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 2272 -n 1 -m 10 -o testframes/3k/GS018423_%d.jpg testframes/3k/track%d/GS018423_%d.jpg
 ```
 
 ##### Use a GoPro Max 5.6K video (width = 4096)
 
 ```
-$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 -o testframes/5-6k/GS018421_%d.jpg testframes/5-6k/track%d/GS018421_%d.jpg
+$ @SYSTEM_PATH/max2spherebatch -w 4096 -n 1 -m 10 -o testframes/5-6k/GS018421_%d.jpg testframes/5-6k/track%d/GS018421_%d.jpg
 ```
 
 ### Metadata
@@ -108,6 +109,18 @@ This script has currently been tested with the following cameras and modes:
 		* 3k stitched (60 FPS)
 	* 360 TimeWarp (output .360)
 		* (2x,5x,10x,15x,30x frame rate)
+
+## Debugging
+
+#### Failed to open warning
+
+If you see the warning:
+
+```
+ReadFrame() - Failed to open "testframes/5-6k/track0/GS018421_11.jpg"
+```
+
+It is likely the value for `-m` used does not match the number of frames in the directories used. This is not a critical error, and you should find all processed frames.
 
 ## Support
 
