@@ -26,11 +26,17 @@ e.g. Template 0, width 5376, height 2688 and antialising of 2.
 
 In the case above where the output image width was autodetermined the lookup table is called `0_5376_2688_2.data`
 
-The template file
+The template refers to the recording mode, the template defines the various geometric values the code needs in order to extract out the parts correctly.
+
+Currently two recording modes are supported. At the top of the MAX2spherebatch.c file you will see the line referencing them:
+
+```
+FRAMESPECS template[NTEMPLATE] = {{4096,1344,1376,1344,32,5376},{2272,736,768,736,16,2944}};
+```
 
 The lookup table does take almost no time to read, compared to calculating the lookup table. However it does end up taking a decent about of disk space, almost 700MB in this case.
 
-For us, this is acceptable as we onl ever have 2 static lookup tables using default settings for 5.6k and 3k videos.
+For us, this is acceptable as we only ever have 2 static lookup tables using default settings for 5.6k and 3k videos.
 
 ## Installation
 
