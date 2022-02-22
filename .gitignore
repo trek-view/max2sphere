@@ -1,6 +1,6 @@
 # OS or Editor folders
 .DS_Store
 bitmaplib.o
-MAX2spherebatch
-MAX2spherebatch.o
+max2sphere
+max2spherebatch.o
 *.data

@@ -4,19 +4,19 @@ INCLUDES =
 LFLAGS = 
 LIBS = -ljpeg -lm 
 
-OBJS = MAX2spherebatch.o bitmaplib.o
+OBJS = max2sphere.o bitmaplib.o
 
-all: MAX2spherebatch
+all: max2sphere
 
-MAX2spherebatch: $(OBJS)
-	$(CC) $(INCLUDES) $(CFLAGS) -o MAX2spherebatch $(OBJS) $(LFLAGS) $(LIBS)
+max2sphere: $(OBJS)
+	$(CC) $(INCLUDES) $(CFLAGS) -o max2sphere $(OBJS) $(LFLAGS) $(LIBS)
 
-MAX2spherebatch.o: MAX2spherebatch.c MAX2spherebatch.h
-	$(CC) $(INCLUDES) $(CFLAGS) -c MAX2spherebatch.c
+max2sphere.o: max2sphere.c max2sphere.h
+	$(CC) $(INCLUDES) $(CFLAGS) -c max2sphere.c
  
 bitmaplib.o: bitmaplib.c bitmaplib.h
 	$(CC) $(INCLUDES) $(CFLAGS) -c bitmaplib.c
 
 clean:
-	rm -rf core MAX2spherebatch $(OBJS) 
+	rm -rf core max2sphere $(OBJS) 
 
