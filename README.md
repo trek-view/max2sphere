@@ -86,32 +86,32 @@ For us, this is acceptable as we only ever have 2 static lookup tables using def
 
 #### Examples (MacOS)
 
-##### Use a GoPro Max 3K video (recommended output width = 2272)
+##### Use a GoPro Max 3K video (input width = 2272 // recommended output width = 3072)
 
 **Single image**
 
 ```shell
-$ /Users/dgreenwood/max2sphere/max2sphere -w 2272 -n 1 -m 1 -o testframes/3k/single/STITCHED/GS018423_%d.jpg testframes/3k/single/track%d/GS018423_%d.jpg
+$ /Users/dgreenwood/max2sphere/max2sphere -w 3072 -n 1 -m 1 -o testframes/3k/single/STITCHED/GS018423_%d.jpg testframes/3k/single/track%d/GS018423_%d.jpg
 ```
 
 **Directory of images**
 
 ```shell
-$ /Users/dgreenwood/max2sphere/max2sphere -w 2272 -n 1 -m 4 -o testframes/3k/directory/STITCHED/GS018423_%d.jpg testframes/3k/directory/track%d/GS018423_%d.jpg
+$ /Users/dgreenwood/max2sphere/max2sphere -w 3072 -n 1 -m 4 -o testframes/3k/directory/STITCHED/GS018423_%d.jpg testframes/3k/directory/track%d/GS018423_%d.jpg
 ```
 
-##### Use a GoPro Max 5.6K video (recommended output width = 4096)
+##### Use a GoPro Max 5.6K video (input width = 4096 // recommended output width = 5376)
 
 **Single image**
 
 ```shell
-$ /Users/dgreenwood/max2sphere/max2sphere -w 4096 -n 1 -m 1 -o testframes/5_6k/single/STITCHED/GS018421_%d.jpg testframes/5_6k/single/track%d/GS018421_%d.jpg
+$ /Users/dgreenwood/max2sphere/max2sphere -w 5376 -n 1 -m 1 -o testframes/5_6k/single/STITCHED/GS018421_%d.jpg testframes/5_6k/single/track%d/GS018421_%d.jpg
 ```
 
 **Directory of images**
 
 ```shell
-$ /Users/dgreenwood/max2sphere/max2sphere -w 4096 -n 1 -m 4 -o testframes/5_6k/directory/STITCHED/GS018421_%d.jpg testframes/5_6k/directory/track%d/GS018421_%d.jpg
+$ /Users/dgreenwood/max2sphere/max2sphere -w 5376 -n 1 -m 4 -o testframes/5_6k/directory/STITCHED/GS018421_%d.jpg testframes/5_6k/directory/track%d/GS018421_%d.jpg
 ```
 
 ## Debugging
