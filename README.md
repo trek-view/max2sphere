@@ -18,6 +18,23 @@ $ make -f Makefile
 $ @SYSTEM_PATH/max2sphere
 ```
 
+Where `@SYSTEM_PATH` is full route to repo and fusion2sphere command, e.g.
+
+```shell
+/Users/dgreenwood/Documents/repos/trek-view/max2sphere/max2sphere
+```
+
+### Note for Mac M1 Chip users
+
+I ran into a few issues with my new Mac with an M1 chop that required a slightly different Makefile (because homebrew directory issues finding installed files, specifically `fatal error: 'jpeglib.h' file not found`).
+
+```shell
+$ git clone https://github.com/trek-view/max2sphere
+$ cd max2sphere
+$ make -f Makefile-MacM1
+$ @SYSTEM_PATH/max2sphere
+```
+
 ## Usage
 
 ### Preparation

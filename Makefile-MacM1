@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -O3 
-INCLUDES =
-LFLAGS = 
+INCLUDES = -I/usr/include -I/opt/homebrew/include -I/opt/homebrew/opt/jpeg/include
+LFLAGS = -L/usr/lib -L/opt/homebrew/lib -L/opt/homebrew/opt/jpeg/lib
 LIBS = -ljpeg -lm 
 
 OBJS = max2sphere.o bitmaplib.o
@@ -18,4 +18,4 @@ bitmaplib.o: bitmaplib.c bitmaplib.h
 	$(CC) $(INCLUDES) $(CFLAGS) -c bitmaplib.c
 
 clean:
-	rm -rf core max2sphere $(OBJS)
+	rm -rf core max2sphere $(OBJS) 
