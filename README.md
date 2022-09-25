@@ -18,7 +18,7 @@ $ make -f Makefile
 $ @SYSTEM_PATH/max2sphere
 ```
 
-Where `@SYSTEM_PATH` is full route to repo and fusion2sphere command, e.g.
+Where `@SYSTEM_PATH` is full route to repo and max2sphere command, e.g.
 
 ```shell
 /Users/dgreenwood/Documents/repos/trek-view/max2sphere/max2sphere
@@ -57,7 +57,7 @@ Note: this assumes video tracks are `0:0` and `0:5`. If timelapse mode is used, 
 ### Script
 
 ```shell
-$ fusion2sphere [options] DIRECTORY_%d/img_%4d.jpg
+$ max2sphere [options] DIRECTORY_%d/img_%4d.jpg
 ```
 
 Variables:
