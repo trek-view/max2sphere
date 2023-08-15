@@ -101,6 +101,12 @@ The lookup table does take almost no time to read, compared to calculating the l
 
 For us, this is acceptable as we only ever have 2 static lookup tables using default settings for 5.6k and 3k videos.
 
+You can download these here:
+
+`5-6-video-4096w.data` (5.6k): https://drive.google.com/file/d/1_kynph90d3ZnaONQNXKCjZzgyMgd-Yfw/view?usp=drive_link
+
+`3k-video-2272w.data` (3k): https://drive.google.com/file/d/1LjZO_e-yhfMRuTcwkp2aLPQchNvvJwfj/view?usp=drive_link
+
 #### Examples (MacOS)
 
 ##### Use a GoPro Max 3K video (input width = 2272 // recommended output width = 3072)
@@ -145,12 +151,6 @@ It is likely the value for `-m` used does not match the number of frames in the 
 
 This is not a critical error, and you should find all processed frames.
 
-## Support
-
-Join our Discord community and get in direct contact with the Trek View team, and the wider Trek View community.
-
-[Join the Trek View Discord server](https://discord.gg/ZVk7h9hCfw).
-
 ## License
 
-The code of this site is licensed under an [MIT License](/LICENSE).
+[Apache 2.0](/LICENSE).
