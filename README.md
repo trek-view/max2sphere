@@ -4,14 +4,14 @@ maxsSphere Batch takes raw GoPro .360 frames (two strips of cube map projections
 
 ## READ BEFORE YOU BEGIN
 
-* the resulting image frames from max2sphere will not have any metadata. max2sphere is implemented in our GoPro Frame Maker script.
+* the resulting image frames from max2sphere will not have any metadata. max2sphere is used in our gopro2frames code which will take care of creating frames from MAX .360 videos with metadata, see: https://github.com/trek-view/gopro2frames
 * If you want to convert .360 EAC videos to a single equirectangular video (not frames), there is a better solution using a custom ffmpeg fork. Instructions to do this are here: https://www.trekview.org/blog/2022/using-ffmpeg-process-gopro-max-360/
 * A nice write up from Paul Bourke who helped us write this code: http://paulbourke.net/panorama/gopromax2sphere/
 * Supporting blog posts that describe the max2sphere design decisions:
-	* [Part 1](https://www.trekview.org/blog/2021/gopro-fusion-fisheye-stitching-part-1/)
-	* [Part 2](https://www.trekview.org/blog/2021/gopro-fusion-fisheye-stitching-part-2/)
-	* [Part 3](https://www.trekview.org/blog/2021/gopro-fusion-fisheye-stitching-part-3/)
-	* [Part 4](https://www.trekview.org/blog/2022/gopro-fusion-fisheye-stitching-part-4/)
+	* [Part 1](https://www.trekview.org/blog/2021/reverse-engineering-gopro-360-file-format-part-1/)
+	* [Part 2](https://www.trekview.org/blog/2021/reverse-engineering-gopro-360-file-format-part-2/)
+	* [Part 3](https://www.trekview.org/blog/2021/reverse-engineering-gopro-360-file-format-part-3/)
+	* [Part 4](https://www.trekview.org/blog/2021/reverse-engineering-gopro-360-file-format-part-4/)
 * If you're using a GoPro Fusion, [check out fusion2sphere](https://github.com/trek-view/fusion2sphere).
 
 ## Installation
