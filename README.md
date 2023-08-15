@@ -34,10 +34,25 @@ Where `@SYSTEM_PATH` is full route to repo and max2sphere command, e.g.
 
 I ran into a few issues with my new Mac with an M1 chop that required a slightly different Makefile (because homebrew directory issues finding installed files, specifically `fatal error: 'jpeglib.h' file not found`).
 
+To address this, instead use the following Makefile;
+
 ```shell
 $ git clone https://github.com/trek-view/max2sphere
 $ cd max2sphere
 $ make -f Makefile-MacM1
+$ @SYSTEM_PATH/max2sphere
+```
+
+### Note for Linux users
+
+[An issue was raised identifying issues with Linux distros](https://github.com/trek-view/max2sphere/issues/2). In this case it was due to the Makefile config.
+
+To address this, instead use the following Makefile;
+
+```shell
+$ git clone https://github.com/trek-view/max2sphere
+$ cd max2sphere
+$ make -f Makefile-Linux
 $ @SYSTEM_PATH/max2sphere
 ```
 
