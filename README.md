@@ -4,8 +4,8 @@ maxsSphere Batch takes raw GoPro .360 frames (two strips of cube map projections
 
 ## READ BEFORE YOU BEGIN
 
-* the resulting image frames from max2sphere will not have any metadata. max2sphere is implemented in our GoPro Frame Maker script. [GoPro Frame Maker adds metadata once fusion2sphere has finished processing (and offers a few other features) which could be better suited to your requirements](https://github.com/trek-view/gopro-frame-maker/).
-* If you want to convert .360 EAC videos to a single equirectangular video (not frames), [you can follow the steps in this blog post to do so](https://www.trekview.org/blog/2022/using-ffmpeg-process-gopro-raw-360).
+* the resulting image frames from max2sphere will not have any metadata. max2sphere is implemented in our GoPro Frame Maker script.
+* If you want to convert .360 EAC videos to a single equirectangular video (not frames), there is a better solution using a custom ffmpeg fork. Instructions to do this are here: https://www.trekview.org/blog/2022/using-ffmpeg-process-gopro-max-360/
 * If you're using a GoPro Fusion, [check out fusion2sphere](https://github.com/trek-view/fusion2sphere).
 
 ## Installation
@@ -103,9 +103,19 @@ For us, this is acceptable as we only ever have 2 static lookup tables using def
 
 You can download these here:
 
-`5-6-video-4096w.data` (5.6k): https://drive.google.com/file/d/1_kynph90d3ZnaONQNXKCjZzgyMgd-Yfw/view?usp=drive_link
+5-6-video-4096w.data (5.6k)
 
-`3k-video-2272w.data` (3k): https://drive.google.com/file/d/1LjZO_e-yhfMRuTcwkp2aLPQchNvvJwfj/view?usp=drive_link
+```shell
+pip3 install gdown
+$ gdown --id 1_kynph90d3ZnaONQNXKCjZzgyMgd-Yfw
+```
+
+3k-video-2272w.data (3k)
+
+```shell
+pip3 install gdown
+$ gdown --id 1LjZO_e-yhfMRuTcwkp2aLPQchNvvJwfj
+```
 
 #### Examples (MacOS)
 
