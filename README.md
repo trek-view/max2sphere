@@ -66,8 +66,9 @@ You will need to first convert a `.360` video to frames and then pass the two co
 
 You can use ffmpeg to split your `.360` video into frames (below at a rate of 1 FPS).
 
-```
-$ ffmpeg -i INPUT.360 -map 0:0 -r 1 -q:v 1 track0/img%d.jpg -map 0:5 -r 1 -q:v 1 track5/img%d.jpg
+```shell
+mkdir track0 track5
+ffmpeg -i INPUT.360 -map 0:0 -r 1 -q:v 1 track0/img%d.jpg -map 0:5 -r 1 -q:v 1 track5/img%d.jpg
 ```
 
 Note: this assumes video tracks are `0:0` and `0:5`. If timelapse mode is used, the tracks are different:
